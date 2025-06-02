@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Logger {
@@ -35,15 +36,15 @@ public class Logger {
              }
              writer = new FileWriter(game+".txt");
         }//Try
-        catch(Exception e){System.out.println("Error in Constructor " + e);}
+        catch(IOException e){System.out.println("Error in Constructor " + e);}
     }//End of Constructer
     public void write(String text){
         try{writer.write(text + "\n");}
-        catch(Exception e){System.out.println(e);}
+        catch(IOException e){System.out.println(e);}
     }
     
     public void close(){
         try{writer.close();}
-        catch(Exception e){System.out.println(e);}
+        catch(IOException e){System.out.println(e);}
     }
 }

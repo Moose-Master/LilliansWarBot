@@ -1,7 +1,7 @@
 import java.util.HashMap;
 public class NiceNums {
     
-    public HashMap<Integer, String> niceNums = new HashMap<Integer, String>();
+    public HashMap<Integer, String> niceNums = new HashMap<>();
     
     public NiceNums(){
         niceNums.put(2,"2");

@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 public class War {
 
-    ArrayList<String> first_belligerent = new ArrayList<String>();
-    ArrayList<String> second_belligerent = new ArrayList<String>();
+    ArrayList<String> first_belligerent = new ArrayList<>();
+    ArrayList<String> second_belligerent = new ArrayList<>();
     
 
     int first_belligerent_count = 0;
@@ -14,7 +14,6 @@ public class War {
     
     
     public War(){
-        //Deck Bulder defines first and second 
         logger.write("First Belligerent \t\t Second Belligerent");
         first_belligerent = buildDecker.db_first_belligerent;
         second_belligerent = buildDecker.dp_second_belligerent;
@@ -22,7 +21,7 @@ public class War {
 
 
     public void war_game(){
-        while(first_belligerent.size() > 0 && second_belligerent.size() > 0){
+        while(!first_belligerent.isEmpty() && !second_belligerent.isEmpty()){
             war_compare(first_belligerent.remove(0),second_belligerent.remove(0),false);
     }
     System.out.println("First Belligerent: " + first_belligerent_count);

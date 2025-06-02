@@ -1,12 +1,12 @@
-import java.util.Scanner;
-import java.util.Collections;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
 public class DeckBuilder {
     String[] suits = {"♠","♥","♦","♣"};
-    public ArrayList<String> db_first_belligerent = new ArrayList<String>();
-    public ArrayList<String> dp_second_belligerent = new ArrayList<String>();
+    public ArrayList<String> db_first_belligerent = new ArrayList<>();
+    public ArrayList<String> dp_second_belligerent = new ArrayList<>();
     
-    ArrayList<String> masterDeck = new ArrayList<String>();
+    ArrayList<String> masterDeck = new ArrayList<>();
     
     public DeckBuilder(){
         Scanner scan = new Scanner(System.in);
