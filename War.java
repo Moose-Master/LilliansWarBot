@@ -1,27 +1,23 @@
 import java.util.ArrayList;
-import java.util.Collections;
 public class War {
-    ArrayList<String> first_belligerent = new ArrayList<String>(52);
-    ArrayList<String> second_belligerent = new ArrayList<String>(52);
+
+    ArrayList<String> first_belligerent = new ArrayList<String>();
+    ArrayList<String> second_belligerent = new ArrayList<String>();
     
+
     int first_belligerent_count = 0;
     int second_belligerent_count = 0;
-    String[] suits = {"♠","♥","♦","♣"};
     
     Logger logger = new Logger();
     NiceNums nnums = new NiceNums();
-    //nnums.niceNums.get();
+    DeckBuilder buildDecker = new DeckBuilder();
+    
+    
     public War(){
-        for(int i = 0; i < 4;i++){
-            for(int l = 2; l < 15; l++){
-                first_belligerent.add(suits[i] + l);
-                second_belligerent.add(suits[i] + l);
-            }
-        }
-        
-        Collections.shuffle(first_belligerent);
-        Collections.shuffle(second_belligerent);
+        //Deck Bulder defines first and second 
         logger.write("First Belligerent \t\t Second Belligerent");
+        first_belligerent = buildDecker.db_first_belligerent;
+        second_belligerent = buildDecker.dp_second_belligerent;
     }
 
 
