@@ -59,9 +59,20 @@ public class War {
             else if(first_belligerent_card == second_belligerent_card){
                 if(first_belligerent.size() > 4 && second_belligerent.size() > 4){
                     logger.write("\t\t\t\t\tWAR!");
-                    logger.write("\t\t\t\t" + first_belligerent.remove(0) + "\t  \t" + second_belligerent.remove(0));
-                    logger.write("\t\t\t\t" + first_belligerent.remove(0) + "\t  \t" + second_belligerent.remove(0));
-                    logger.write("\t\t\t\t" + first_belligerent.remove(0) + "\t  \t" + second_belligerent.remove(0));
+                    
+                    for(int l = 0; l < 3; l ++){
+                    first_belligerent_cardS = first_belligerent.remove(0);
+                    second_belligerent_cardS = second_belligerent.remove(0);
+
+                    first_belligerent_card = Integer.parseInt(first_belligerent_cardS.substring(1));
+                    second_belligerent_card = Integer.parseInt(second_belligerent_cardS.substring(1));
+
+                    first_belligerent_cardS = first_belligerent_cardS.substring(0,1) + nnums.niceNums.get(first_belligerent_card);
+                    second_belligerent_cardS = second_belligerent_cardS.substring(0,1) + nnums.niceNums.get(second_belligerent_card);
+            
+                    logger.write("\t\t\t\t" + first_belligerent_cardS + "\t  \t" + second_belligerent_cardS);
+                    }
+                    
                     war_compare(first_belligerent.remove(0), second_belligerent.remove(0),true);
                 }
                 else{
