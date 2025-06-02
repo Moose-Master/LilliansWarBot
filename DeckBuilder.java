@@ -23,7 +23,7 @@ public class DeckBuilder {
 
         Collections.shuffle(masterDeck);
 
-        while(masterDeck.size() < 0){
+        while(!masterDeck.isEmpty()){
             db_first_belligerent.add(masterDeck.remove(0));
             dp_second_belligerent.add(masterDeck.remove(0));
         }
